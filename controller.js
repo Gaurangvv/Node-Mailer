@@ -1,9 +1,11 @@
 const Sender = require("./global");
-
+// Send email controller
 exports.sendEmailHtml = async (req, res) => {
   try {
+
     const { email, text, subject, html } = req.body;
-    console.log(email);
+    // console.log(email);
+    // Data to be sent
     const template = {
       from: process.env.AUTH_EMAIL,
       to: email,
